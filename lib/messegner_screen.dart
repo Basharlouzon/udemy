@@ -9,24 +9,39 @@ class messengerScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0.0,
-          title: Row(
-            children: [
-              CircleAvatar(
-                radius: 15.0,
-                backgroundImage: NetworkImage(''),
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        title: Row(
+          children: [
+            CircleAvatar(
+              radius: 20.0,
+              backgroundImage: NetworkImage(
+                  'https://avatars.githubusercontent.com/u/6737485?v=4'),
+            ),
+            SizedBox(
+              width: 12.0,
+            ),
+            Text(
+              ' Chats',
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w800,
+                fontSize: 20.0,
               ),
-              Text(
-                ' Chats',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 20.0,
-                ),
-              ),
-            ],
-          )),
+            ),
+          ],
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.camera,
+              size: 20.0,
+              color: Colors.red,
+            ),
+            onPressed: () {},
+          ),
+        ],
+      ),
     );
   }
 }
